@@ -52,7 +52,7 @@
 
 - (BOOL)isEqual:(id)other
 {
-    return [other.name isEqual self.name];
+    return [[(TKState *)other name] isEqual: self.name];
 }
 
 - (NSUInteger)hash
