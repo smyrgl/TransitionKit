@@ -50,6 +50,16 @@
     return [NSString stringWithFormat:@"<%@:%p '%@'>", NSStringFromClass([self class]), self, self.name];
 }
 
+- (BOOL)isEqual:(id)other
+{
+    return [other.name isEqual self.name];
+}
+
+- (NSUInteger)hash
+{
+    return [[self name] hash];
+}
+
 #pragma mark - NSCopying
 
 - (id)copyWithZone:(NSZone *)zone
